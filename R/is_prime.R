@@ -1,3 +1,14 @@
+#' Tests to see if a numeric is prime
+#'
+#' @param n number to test
+#'
+#' @return boolean value: `TRUE` if `n` is prime and `FALSE` if `n` is composite
+#' @export
+#'
+#' @examples
+#' is_prime(2)
+#' is_prime(4)
+#' is_prime(1)
 is_prime <- function(n){
     if(round(n) != n){
         stop("`n` must be an integer.")}
