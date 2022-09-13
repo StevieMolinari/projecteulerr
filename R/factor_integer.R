@@ -1,3 +1,14 @@
+#' Provides factors of integer
+#'
+#' @param n number to be factored
+#'
+#' @return a numeric vector of factors
+#' @export
+#'
+#' @examples
+#' factor_integer(6)
+#' factor_integer(7)
+#' factor_integer(24)
 factor_integer <- function(n){
     if(round(n) != n){
         stop("`n` must be an integer.")}
