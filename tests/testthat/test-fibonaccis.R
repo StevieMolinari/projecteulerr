@@ -1,3 +1,4 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("fibonnacis work", {
+    expect_equal(fibonaccis(2), c(1, 1))
+    expect_equal(fibonaccis(0), numeric(0))
 })
