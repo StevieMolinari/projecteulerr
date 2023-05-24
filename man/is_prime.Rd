@@ -2,21 +2,23 @@
 % Please edit documentation in R/is_prime.R
 \name{is_prime}
 \alias{is_prime}
-\title{Tests to see if a numeric is prime}
+\title{Primality Testing}
 \usage{
 is_prime(n)
 }
 \arguments{
-\item{n}{number to test}
+\item{n}{number to be tested}
 }
 \value{
-boolean value: \code{TRUE} if \code{n} is prime and \code{FALSE} if \code{n} is composite
+returns \code{TRUE} or \code{FALSE} depending on whether its argument is prime or not
 }
 \description{
-Tests to see if a numeric is prime
+Primality Testing
 }
 \examples{
 is_prime(2)
 is_prime(4)
 is_prime(1)
+is_prime(2^31 - 1)
+is_prime(10^16)
 }

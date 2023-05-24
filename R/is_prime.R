@@ -1,29 +1,38 @@
-#' Tests to see if a numeric is prime
+#' Primality Testing
 #'
-#' @param n number to test
+#' @param n number to be tested
 #'
-#' @return boolean value: `TRUE` if `n` is prime and `FALSE` if `n` is composite
+#' @return returns `TRUE` or `FALSE` depending on whether its argument is prime or not
 #' @export
 #'
 #' @examples
 #' is_prime(2)
 #' is_prime(4)
 #' is_prime(1)
+#' is_prime(2^31 - 1)
+#' is_prime(10^16)
+
+
 is_prime <- function(n){
-    if(round(n) != n){
-        stop("`n` must be an integer.")}
-    if(n < 0){
-        stop("`n` must be a positive integer.")}
+    stopifnot(
+        is.numeric(n),
+        n>0,
+        round(n) == n
+    )
 
     ## 1 is neither prime nor composite
     if(n == 1){
-        return(NA)}
+        return(NA)
+    }
 
+    ## handles small cases
     if(n %in% c(2, 3)){
-        return(TRUE)}
+        return(TRUE)
+    }
 
-    ## all numbers less than sqrt(n) are not factors
+    ## are all numbers less than sqrt(n) not factors
     return(
-        all(n %% 2:floor(sqrt(n)) != 0))
+        all(n %% 2:floor(sqrt(n)) != 0)
+    )
 }
 
