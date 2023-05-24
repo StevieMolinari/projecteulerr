@@ -18,7 +18,7 @@ test_that("`is_prime` returns TRUE when passed a prime", {
 test_that("`is_prime` returns FALSE when passed a composite", {
     expect_equal(is_prime(4), FALSE)
     expect_equal(is_prime(6), FALSE)
-    expect_equal(is_prime(prod(sample(1:100, size=2))), FALSE)
+    expect_equal(is_prime(prod(sample(2:100, size=2))), FALSE)
 })
 
 
