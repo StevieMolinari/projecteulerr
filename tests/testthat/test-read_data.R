@@ -1,7 +1,8 @@
 library(stringr)
 
 test_that("`read_data` returns null without arguments", {
-    expect_warning(read_data(), "couldn't find data.")
+    expect_warning(
+        read_data(), regexp = "Couldn't find data")
     expect_null(suppressWarnings(read_data()))
 })
 
@@ -14,8 +15,7 @@ test_that("`read_data` reject incorrect appropriate 'problem' arguments", {
 
 test_that("`read_data` doesn't read problem without data", {
     expect_warning(
-        read_data(problem = 1),
-        "no data found for problem"
+        read_data(problem = 1), regexp = "Data doesn't exist"
     )
     expect_null(suppressWarnings(read_data(problem = 1)))
 })
