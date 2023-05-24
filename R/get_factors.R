@@ -10,14 +10,11 @@
 #' get_factors(7)
 #' get_factors(24)
 
-get_factors <- function(n){
-    stopifnot(
-        is.numeric(n),
-        n>0,
-        round(n) == n
-    )
 
-    ## which numbers less than sqrt(n) are factors
+get_factors <- function(n){
+    check_natural_number(n)
+
+    ## which n less than sqrt(n) are factors
     factLeqSqrt = which(n %% 1:floor(sqrt(n)) == 0)
     factGeqSqrt = n / factLeqSqrt
 

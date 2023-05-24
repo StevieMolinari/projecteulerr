@@ -2,6 +2,7 @@
 
 export("%>%")
 export(get_factors)
+export(get_prime_factors)
 export(is_prime)
 export(read_data)
 importFrom(magrittr,"%>%")
