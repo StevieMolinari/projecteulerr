@@ -1,0 +1,37 @@
+#### Monday 2023-05-22 ####
+* watching clean code to refresh test driven development
+* clean coders project euler 2.2 & 3
+* cc pe 3 demos test driven for `get_factors`
+
+Easy testing with R package
+* https://www.youtube.com/watch?v=KbwYdRbmgbY
+* initialize with `library(devtools)`
+* `use_r("<function_name>")` creates function in package
+* `use_testthat()` sets up overall testing infrastructure
+* `use_test()` with function script opened creates new test for function
+
+
+
+
+#### Tuesday 2023-05-23 ####
+* began work on `read_data` function
+* created TDD workflow with `use_r` and `use_test()`
+* when tests return a value of 'Warning' it means you are getting a warning
+    * to fix have an `expect_warning()` test and `suppressWarnings` for any other tests
+* ordered package building, clean code, and tdd books
+* tomorrow:
+    * redo `get_fibonnaccis` with tdd
+    * re-read package building
+
+
+#### Wednesday 2023-05-24 ####
+* read ch 1 & 2 in R packages (2e)
+* created `to_pep` shortcut to get to folder in terminal
+* committed work
+
+
+## shortcuts
+* com + L -> load package
+* com + T -> test package
+* com + E -> "checks" package
+* com + D -> updates documentation in package

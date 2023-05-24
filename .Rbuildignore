@@ -1,3 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^roadmap_n_todos\.txt$
+^working_mem\.txt$
+^scratch_work\.R$

@@ -1,0 +1,31 @@
+
+##################
+#### Roadmap: ####
+##################
+
+Week1:
+[x] workflow and ide
+    [] practice shortcuts/create handy list
+[x] attempt test driven development (tdd)
+[] redo functions w/ tdd
+[] reread package building in R
+[] function documentation
+[] watch/read clean code
+
+
+Week2:
+[] revisit tdd
+
+Week3:
+* ...
+
+
+
+##################
+####  TODOs:  ####
+##################
+* redo functions w/ tdd
+    * is_prime()
+    * fibonnaccis()
+    * factor_integer()
+
