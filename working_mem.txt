@@ -26,8 +26,10 @@ Easy testing with R package
 
 #### Wednesday 2023-05-24 ####
 * read ch 1 & 2 in R packages (2e)
+    * checked package: fixed all errors/warnings/notes
 * created `to_pep` shortcut to get to folder in terminal
 * committed work
+
 
 
 ## shortcuts

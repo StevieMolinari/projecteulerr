@@ -25,7 +25,8 @@ Week3:
 ####  TODOs:  ####
 ##################
 * redo functions w/ tdd
-    * is_prime()
     * fibonnaccis()
     * factor_integer()
+
+* edit/test efficacy of `is_prime` with checking only primes leq to `sqrt(n)` rather than all n leq `sqrt(n)`.
 

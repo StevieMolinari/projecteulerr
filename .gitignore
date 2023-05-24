@@ -6,6 +6,6 @@
 .httr-oauth
 .DS_Store
 
-roadmap_n_todos
-working_mem
+roadmap_n_todos.txt
+working_mem.txt
 scratch_work.R
