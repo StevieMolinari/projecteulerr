@@ -2,6 +2,9 @@
 
 export("%>%")
 export(get_factors)
+export(get_first_n_fibonaccis)
+export(get_first_n_primes)
+export(get_nth_fibonacci)
 export(get_prime_factorization)
 export(get_prime_factors)
 export(get_primes_up_to)

@@ -69,7 +69,7 @@ get_prime_factors <- function(n){
 #' Provides prime factorization of a natural number
 #'
 #' @section May be useful for:
-#'
+#' * Problem 47: Distinct primes factors
 #'
 #' @param n the naturnal number to factor
 #'
