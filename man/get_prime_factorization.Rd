@@ -2,22 +2,34 @@
 % Please edit documentation in R/get_factors.R
 \name{get_prime_factorization}
 \alias{get_prime_factorization}
-\title{Gets prime factorization of a number}
+\title{Provides prime factorization of a natural number}
 \usage{
 get_prime_factorization(n)
 }
 \arguments{
-\item{n}{the number to factor}
+\item{n}{the naturnal number to factor}
 }
 \value{
-a list with the prime factors (\verb{$primes}) and their respective exponents (\verb{$exponents})
+a list with the prime factors and their respective exponents:
+\itemize{
+\item \code{primes}: numeric vector with sorted unique prime factors
+\item \code{exponents}: numeric vector with respective exponents
+}
 }
 \description{
-Gets prime factorization of a number
+Provides prime factorization of a natural number
 }
+\section{May be useful for}{
+
+}
+
 \examples{
 pf24 = get_prime_factorization(24)
 pf24$primes
 pf24$exponents
 prod(pf24$primes^pf24$exponents)
+
+}
+\seealso{
+\code{\link[=get_prime_factors]{get_prime_factors()}}
 }

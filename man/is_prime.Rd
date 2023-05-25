@@ -15,6 +15,15 @@ returns \code{TRUE} or \code{FALSE} depending on whether its argument is prime o
 \description{
 Primality Testing
 }
+\section{May be useful for}{
+
+\itemize{
+\item Problem 27: Quadratic primes
+\item Problem 35: Circular primes
+\item Problem 41: Pandigital prime
+}
+}
+
 \examples{
 is_prime(2)
 is_prime(4)

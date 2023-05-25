@@ -2,21 +2,32 @@
 % Please edit documentation in R/get_factors.R
 \name{get_prime_factors}
 \alias{get_prime_factors}
-\title{Gets the prime factors of a number.}
+\title{Provides prime factors of a natural number}
 \usage{
 get_prime_factors(n)
 }
 \arguments{
-\item{n}{the number to factor}
+\item{n}{the naturnal number to factor}
 }
 \value{
 a numeric vector containing the prime factors of n
 }
 \description{
-Gets the prime factors of a number.
+The \code{get_prime_factors} function calculates and returns the \emph{unique} prime factors of a given natural number n (i.e. it \emph{does not} return the prime factorization of a natural number).
 }
+\section{May be useful for}{
+
+\itemize{
+\item Problem 3: Largest prime factor
+}
+}
+
 \examples{
 get_prime_factors(7)
 get_prime_factors(6)
 get_prime_factors(2^10)
+
+}
+\seealso{
+\code{\link[=get_factors]{get_factors()}}, \code{\link[=get_prime_factorization]{get_prime_factorization()}}, \code{\link[=is_prime]{is_prime()}}
 }

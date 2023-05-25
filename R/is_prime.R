@@ -3,7 +3,11 @@
 #' @param n number to be tested
 #'
 #' @return returns `TRUE` or `FALSE` depending on whether its argument is prime or not
-#' @export
+#'
+#' @section May be useful for:
+#' * Problem 27: Quadratic primes
+#' * Problem 35: Circular primes
+#' * Problem 41: Pandigital prime
 #'
 #' @examples
 #' is_prime(2)
@@ -11,7 +15,7 @@
 #' is_prime(1)
 #' is_prime(2^31 - 1)
 #' is_prime(10^16)
-
+#' @export
 
 is_prime <- function(n){
     stopifnot(

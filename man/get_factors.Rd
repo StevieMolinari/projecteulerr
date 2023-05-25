@@ -2,21 +2,40 @@
 % Please edit documentation in R/get_factors.R
 \name{get_factors}
 \alias{get_factors}
-\title{Provides factors of integer}
+\title{Provides factors of a natural number}
 \usage{
 get_factors(n)
 }
 \arguments{
-\item{n}{number to be factored}
+\item{n}{the naturnal number to factor}
 }
 \value{
 a numeric vector of factors
 }
 \description{
-Provides factors of integer
+The \code{get_factors} function returns all the factors of a given natural number n. For prime numbers \code{p} it returns the numeric vector \code{c(1, p)}. For composite numbers it returns a numeric vector of length at least 3. When \code{n=1} it returns the numeric "vector" \code{c(1)}.
 }
+\section{Description of Algorithm}{
+
+\code{get_factors} uses a simple algorithm that iterates over all numbers from 1 to the square root of \code{n} (inclusive), checking if n is divisible by each of these numbers. It then calculates the corresponding "factor pair" (the quotient when n is divided by the factor) for each factor less than the square root of \code{n}, combines these and returns the corresponding vector.
+}
+
+\section{May be useful for}{
+
+\itemize{
+\item Problem 12: Highly divisible triangular number
+\item Problem 21: Amicable numbers
+\item Problem 23: Non-abundant sums
+\item Problem 47: Distinct primes factors
+}
+}
+
 \examples{
 get_factors(6)
 get_factors(7)
 get_factors(24)
+
+}
+\seealso{
+\code{\link[=get_prime_factors]{get_prime_factors()}}
 }
