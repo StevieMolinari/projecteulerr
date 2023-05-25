@@ -4,13 +4,13 @@
 \alias{get_primes_up_to}
 \title{Get primes numbers up to a particular number}
 \usage{
-get_primes_up_to(n)
+get_primes_up_to(maxVal)
 }
 \arguments{
-\item{n}{the maximum values to consider}
+\item{maxVal}{the maximum values to consider}
 }
 \value{
-a numeric vector with all primes less than or equal to \code{n}
+a numeric vector with all primes less than or equal to \code{maxVal}
 }
 \description{
 Get primes numbers up to a particular number

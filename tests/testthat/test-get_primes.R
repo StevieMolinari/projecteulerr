@@ -6,11 +6,36 @@ test_that("`get_primes_up_to` accepts only natural number `upTo arguments", {
 })
 
 test_that("`get_primes_up_to` returns empty for `n = 1`", {
-    expect_equal(get_primes_up_to(1), numeric())
+    expect_identical(get_primes_up_to(1), integer())
 })
 
 test_that("`get_primes_up_to` returns correct answer for `n > 1`", {
-    expect_equal(get_primes_up_to(2), 2)
-    expect_equal(get_primes_up_to(3), c(2, 3))
-    expect_equal(get_primes_up_to(4), c(2, 3))
+    initialPrimes = c(2L, 3L, 5L, 7L, 11L, 13L)
+    expect_identical(get_primes_up_to(2), initialPrimes[1])
+    expect_identical(get_primes_up_to(3), initialPrimes[1:2])
+    expect_identical(get_primes_up_to(4), initialPrimes[1:2])
+    expect_identical(get_primes_up_to(5), initialPrimes[1:3])
+    expect_identical(get_primes_up_to(6), initialPrimes[1:3])
+    expect_identical(get_primes_up_to(7), initialPrimes[1:4])
+    expect_identical(get_primes_up_to(16), initialPrimes)
+})
+
+
+test_that("`get_first_n_primes` accepts only natural number argument", {
+    expect_error(get_first_n_primes())
+    expect_error(get_first_n_primes(""))
+    expect_error(get_first_n_primes(-10))
+    expect_error(get_first_n_primes(42/5))
+})
+
+test_that("`get_first_n_primes` returns correct sequence", {
+    initialPrimes = c(2L, 3L, 5L, 7L, 11L, 13L)
+    expect_identical(get_first_n_primes(1), initialPrimes[1])
+    expect_identical(get_first_n_primes(2), initialPrimes[1:2])
+    expect_identical(get_first_n_primes(3), initialPrimes[1:3])
+    expect_identical(get_first_n_primes(4), initialPrimes[1:4])
+    expect_identical(get_first_n_primes(5), initialPrimes[1:5])
+    expect_identical(get_first_n_primes(6), initialPrimes[1:6])
+    expect_identical(get_first_n_primes(25), get_primes_up_to(100))
+
 })

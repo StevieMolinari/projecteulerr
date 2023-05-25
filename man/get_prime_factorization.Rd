@@ -21,6 +21,9 @@ Provides prime factorization of a natural number
 }
 \section{May be useful for}{
 
+\itemize{
+\item Problem 47: Distinct primes factors
+}
 }
 
 \examples{
