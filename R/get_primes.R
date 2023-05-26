@@ -17,13 +17,13 @@ get_primes_up_to <- function(bound){
     return(actualPrimes)
 }
 
-
 #' @rdname get_primes
 #' @export
 get_first_n_primes <- function(n){
     check_natural_number(n)
     bound = get_bound_argument(n)
     primes = get_primes_up_to(bound)
+    # stopifnot(length(primes) >= n)
     return(primes[1:n])
 }
 

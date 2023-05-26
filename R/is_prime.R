@@ -18,21 +18,12 @@
 #' @export
 
 is_prime <- function(n){
-    stopifnot(
-        is.numeric(n),
-        n>0,
-        round(n) == n
-    )
-
+    check_natural_number(n)
     ## 1 is neither prime nor composite
-    if(n == 1){
-        return(NA)
-    }
+    if(n == 1){return(NA)}
 
     ## handles small cases
-    if(n %in% c(2, 3)){
-        return(TRUE)
-    }
+    if(n %in% c(2, 3)){return(TRUE)}
 
     ## are all numbers less than sqrt(n) not factors
     return(
