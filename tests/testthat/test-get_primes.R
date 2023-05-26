@@ -28,6 +28,10 @@ test_that("`get_first_n_primes` accepts only natural number argument", {
     expect_error(get_first_n_primes(42/5))
 })
 
+test_that("`get_first_n_primes` accepts reasonable arguments", {
+    expect_error(get_first_n_primes(n=6813315), "`n` is too large")
+})
+
 test_that("`get_first_n_primes` returns correct sequence", {
     initialPrimes = c(2L, 3L, 5L, 7L, 11L, 13L)
     expect_identical(get_first_n_primes(1), initialPrimes[1])
@@ -37,5 +41,28 @@ test_that("`get_first_n_primes` returns correct sequence", {
     expect_identical(get_first_n_primes(5), initialPrimes[1:5])
     expect_identical(get_first_n_primes(6), initialPrimes[1:6])
     expect_identical(get_first_n_primes(25), get_primes_up_to(100))
+})
 
+
+test_that("`get_primes` has arguments", {
+    expect_error(get_primes(), "argument must be provided")
+})
+
+test_that("`get_primes` provides correct values with `bound` argument", {
+    expect_identical(get_primes(bound=4), c(2L, 3L))
+})
+
+test_that("`get_primes` provides correct values with `n` argument", {
+    expect_identical(get_primes(n=4), c(2L, 3L, 5L, 7L))
+})
+
+test_that("`get_primes`'s has correct behavior when `n` and bound arguments provided", {
+    expect_warning(
+        get_primes(n=4, bound=10),
+        "`n` and `bound` arguments supplied"
+    )
+    expect_identical(
+        suppressWarnings(get_primes(n=4, bound=13)),
+        c(2L, 3L, 5L, 7L)
+    )
 })

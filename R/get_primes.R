@@ -1,19 +1,11 @@
-#' Get primes numbers up to a particular number
-#'
-#' @param maxVal the maximum values to consider
-#'
-#' @return a numeric vector with all primes less than or equal to `maxVal`
+#' @rdname get_primes
 #' @export
-#'
-#' @examples
-#' get_primes_up_to(10)
+get_primes_up_to <- function(bound){
+    check_natural_number(bound)
+    if(bound == 1){return(integer(0))}
 
-get_primes_up_to <- function(maxVal){
-    check_natural_number(maxVal)
-    if(maxVal == 1){return(integer(0))}
-
-    sRoot = floor(sqrt(maxVal))
-    candidatePrimes = 2:maxVal
+    sRoot = floor(sqrt(bound))
+    candidatePrimes = 2:bound
     actualPrimes = integer()
     iPrime = candidatePrimes[1]
     while (iPrime <= sRoot) {
@@ -25,31 +17,68 @@ get_primes_up_to <- function(maxVal){
     return(actualPrimes)
 }
 
-#' Provides the first n prime numbers
-#'
-#' uses the prime number theorem to determine the
-#' @param n the number of primes to return
-#'
-#' @return a numeric vector of length n containing the first n primes
-#'
-#' @examples
-#' get_first_n_primes(1)
-#' get_first_n_primes(3)
-#' get_first_n_primes(10)
-#' @export
 
+#' @rdname get_primes
+#' @export
 get_first_n_primes <- function(n){
     check_natural_number(n)
-    maxVal = get_maxVal_argument(n)
-    primes = get_primes_up_to(maxVal)
+    bound = get_bound_argument(n)
+    primes = get_primes_up_to(bound)
     return(primes[1:n])
 }
 
-get_maxVal_argument <- function(n) {
+get_bound_argument <- function(n) {
     adjConst = 30*log(113)/113
-    maxValCands = round(10^seq(2, 9, by = 0.01))
-    pi_upperBound = ceiling(
-        adjConst * maxValCands / log(maxValCands)
+    boundCands = round(10^seq(2, 8, by = 0.01))
+    pi_upperBounds = ceiling(
+        adjConst * boundCands / log(boundCands)
     )
-    maxValCands[min(which(pi_upperBound > n))]
+    if(all(pi_upperBounds <= n)){
+        stop("`n` is too large.")
+    }
+    boundCands[pi_upperBounds > n][1]
+}
+
+
+#' Provides sequence of prime numbers
+#'
+#' @param n the number of primes to return
+#' @param bound the maximum value that the largest prime must not exceed
+#'
+#' @return a numeric vector (of length n if `n` argument is provide) containing the prime numbers
+#'
+#' @section Details:
+#'
+#' The `get_primes_up_to()` function is employs the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) algorithms.
+#'
+#'
+#' The `get_first_n_primes()` function is simple in that it first finds an upper bound for the nth prime. Then it employs the `get_primes_up_to()` function with this bound and then returns the first n results. The bound calculation employs the [Prime Number Theorem](https://en.wikipedia.org/wiki/Prime_number_theorem) which says the prime-counting function \eqn{\pi(N)} (the number of primes less than or equal to \eqn{N}) limits to \eqn{\frac{N}{\log{N}}}. This means there exists a constant \eqn{c} such that \eqn{\pi(N) \leq c \, \frac{N}{\log{N}}}. By inspection we find that:
+#'
+#'  \eqn{\underset{N \leq 10^8}{\mathrm{argmax}} \, \, \frac{\pi(N) \log{N}}{N} = 113}.
+#'
+#'  Therefore, by setting \eqn{c = \frac{30\log(113)}{113}} we satisfy the inequality \eqn{\pi(N) \leq c \frac{N}{\log{N}}} for all \eqn{N}.
+#'
+#'  Finally to find the value for the `bound` argument, we simple create a list of candidates bounds that are log linear from \eqn{10^2} to \eqn{10^8} and then check to see which of the "over-estimated" values \eqn{\hat{\pi}(N) = c \, \frac{N}{\log{N}}} are greater than the provided argument `n`.
+#'
+#' @examples
+#' get_primes_up_to(100)
+#'
+#' get_first_n_primes(20)
+#'
+#' @export
+get_primes <- function(n, bound){
+    if(missing(n) & missing(bound)){
+        stop("Either `n` or `bound` argument must be provided.")
+    }
+    if(missing(n)){
+        return(get_primes_up_to(bound))
+    } else{
+        if(!missing(bound)){
+            warning(
+                "`n` and `bound` arguments supplied; ",
+                "`bound` argument is ignored"
+            )
+        }
+        return(get_first_n_primes(n))
+    }
 }
