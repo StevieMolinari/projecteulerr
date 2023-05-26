@@ -1,7 +1,5 @@
 #' @rdname get_fibonaccis
-#'
 #' @export
-
 get_first_n_fibonaccis <- function(n, firstTwo = c(1L, 1L)){
     check_non_negative_integer(n)
     check_firstTwo_argument(firstTwo)
@@ -30,7 +28,6 @@ check_firstTwo_argument <- function(firstTwo){
 }
 
 #' @rdname get_fibonaccis
-#'
 #' @export
 get_fibonaccis_up_to <- function(bound){
     check_non_negative_integer(bound)
@@ -47,6 +44,7 @@ get_fibonaccis_up_to <- function(bound){
 #'
 #' @param n the number of terms in the sequence
 #' @param bound the upper bound for the terms in the sequence
+#' @param firstTwo the first two terms in the sequence
 #' @param ... further arguments to be passed to `get_first_n_fibonaccis` or `get_fibonaccis_up_to`
 #'
 #' @return a sequence of integers
@@ -97,8 +95,6 @@ get_fibonaccis <- function(n, bound, ...){
         return(get_first_n_fibonaccis(n, ...))
     }
 }
-
-
 
 
 #' Provides nth fibonnacci number

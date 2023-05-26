@@ -15,6 +15,8 @@ get_fibonaccis(n, bound, ...)
 \arguments{
 \item{n}{the number of terms in the sequence}
 
+\item{firstTwo}{the first two terms in the sequence}
+
 \item{bound}{the upper bound for the terms in the sequence}
 
 \item{...}{further arguments to be passed to \code{get_first_n_fibonaccis} or \code{get_fibonaccis_up_to}}

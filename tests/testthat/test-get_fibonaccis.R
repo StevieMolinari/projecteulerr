@@ -79,7 +79,6 @@ test_that("`get_fibonaccis` has arguments", {
     expect_error(get_fibonaccis(), "argument must be provided")
 })
 
-
 test_that("`get_fibonaccis` provides correct values with `bound` argument", {
     expect_identical(get_fibonaccis(bound=4), c(1L, 1L, 2L, 3L))
 })
