@@ -15,6 +15,13 @@ a single numeric
 \description{
 Uses explicit closed-form formula to compute nth fibonacci number.
 }
+\section{May be useful for}{
+
+\itemize{
+\item Problem 25: 1000-digit Fibonacci number
+}
+}
+
 \examples{
 get_nth_fibonacci(5)
 get_nth_fibonacci(500)
@@ -22,5 +29,5 @@ all(get_first_n_fibonaccis(5) == sapply(1:5, get_nth_fibonacci))
 
 }
 \seealso{
-\code{\link[=get_nth_fibonacci]{get_nth_fibonacci()}}
+\code{\link[=get_fibonaccis]{get_fibonaccis()}}
 }
