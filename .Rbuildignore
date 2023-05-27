@@ -5,4 +5,5 @@
 ^_daily_log\.txt$
 ^_scratch\.R$
 ^notes$
+^WIPs$
 ^solutions$
