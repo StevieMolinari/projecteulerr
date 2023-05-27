@@ -1,8 +1,15 @@
 library(stringr)
 htmlFormatters = c(
-    "<p>", "</p>", "<br />",
-    "<sup>", "</sup>", '<p class="center">',
-    "<var>", "</var>", "</sub>"
+    "<p>", "</p>",
+    "<i>", "</i>",
+    "<ul>", "</ul>",
+    "<li>", "</li>",
+    "<br />", "</div>",
+    "</sub>", "</sup>",
+    "<var>", "</var>",
+    "<blockquote>", "</blockquote>",
+    '<p class="center">', '<p class="smaller">',
+    '<div class="note">'
 )
 
 get_problem_text <- function(problem){
@@ -21,6 +28,8 @@ get_problem_text <- function(problem){
     problemLines = problemHtmlLines[problemLineStart:problemLineEnd] %>%
         str_replace_all(paste(htmlFormatters, collapse = "|"), "") %>%
         str_replace_all("<sub>", "_") %>%
+        str_replace_all("<sup>", "^") %>%
+
         remove_empty_lines()
 
     cat(
@@ -33,6 +42,4 @@ get_problem_text <- function(problem){
 remove_empty_lines <- function(lines){
     lines[str_trim(lines) != ""]
 }
-
-get_problem_text(44)
 
