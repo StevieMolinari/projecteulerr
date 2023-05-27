@@ -1,8 +1,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
-^roadmap\.txt$
-^w_memory\.txt$
-^scratch_work\.R$
+^_roadmap\.txt$
+^_daily_log\.txt$
+^_scratch\.R$
 ^notes$
 ^solutions$

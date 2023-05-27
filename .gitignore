@@ -6,7 +6,7 @@
 .httr-oauth
 .DS_Store
 
-roadmap.txt
-w_memory.txt
-scratch_work.R
+_daily_log.txt
+_roadmap.txt
+_scratch.R
 notes
