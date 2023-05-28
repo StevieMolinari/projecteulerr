@@ -14,4 +14,14 @@
 #
 # Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
 
+library(projecteulerr)
 
+sum_of_powers <- function(x, p){sum(x^p)}
+is_sum_of_digit_powers <- function(n, p){
+    sum_of_powers(get_digits(n), p) == n
+}
+
+# sum_of_powers(rep(9, 6), 5) < 999999
+MAX_N = 6*9^5
+numbers = 2:MAX_N
+sum(numbers[sapply(numbers, is_sum_of_digit_powers, p = 5)])
