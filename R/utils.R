@@ -50,3 +50,5 @@ check_non_negative_integer <- function(n, ...){
 is_integer <- function(x){
     x == round(x)
 }
+
+`%notin%` <- Negate(`%in%`)
