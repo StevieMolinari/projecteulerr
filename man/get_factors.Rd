@@ -4,10 +4,12 @@
 \alias{get_factors}
 \title{Provides factors of a natural number}
 \usage{
-get_factors(n)
+get_factors(n, proper = FALSE)
 }
 \arguments{
 \item{n}{the naturnal number to factor}
+
+\item{proper}{logical (default is FALSE): whether or not to return the proper factorst}
 }
 \value{
 a numeric vector of factors
@@ -34,6 +36,7 @@ The \code{get_factors} function returns all the factors of a given natural numbe
 get_factors(6)
 get_factors(7)
 get_factors(24)
+get_factors(24, proper = TRUE)
 
 }
 \seealso{

@@ -23,12 +23,20 @@ a numeric vector (of length n if \code{n} argument is provide) containing the pr
 \description{
 Provides sequence of prime numbers
 }
+\section{May be useful for}{
+
+\itemize{
+\item Problem 7: 10001st prime
+\item Problem 10: Summation of primes
+}
+}
+
 \section{Details}{
 
 
 The \code{get_primes_up_to()} function is employs the \href{https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes}{Sieve of Eratosthenes} algorithms.
 
-The \code{get_first_n_primes()} function is simple in that it first finds an upper bound for the nth prime. Then it employs the \code{get_primes_up_to()} function with this bound and then returns the first n results. The bound calculation employs the \href{https://en.wikipedia.org/wiki/Prime_number_theorem}{Prime Number Theorem} which says the prime-counting function \eqn{\pi(N)} (the number of primes less than or equal to \eqn{N}) limits to \eqn{\frac{N}{\log{N}}}. This means there exists a constant \eqn{c} such that \eqn{\pi(N) \leq c \, \frac{N}{\log{N}}}. By inspection we find that:
+The \code{get_first_n_primes()} function first finds an upper bound for the nth prime. Then it employs the \code{get_primes_up_to()} function with this bound and then returns the first n results. The bound calculation employs the \href{https://en.wikipedia.org/wiki/Prime_number_theorem}{Prime Number Theorem} which says the prime-counting function \eqn{\pi(N)} (the number of primes less than or equal to \eqn{N}) limits to \eqn{\frac{N}{\log{N}}}. This means there exists a constant \eqn{c} such that \eqn{\pi(N) \leq c \, \frac{N}{\log{N}}}. By inspection we find that:
 
 \eqn{\underset{N \leq 10^8}{\mathrm{argmax}} \, \, \frac{\pi(N) \log{N}}{N} = 113}.
 

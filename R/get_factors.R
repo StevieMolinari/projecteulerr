@@ -12,6 +12,7 @@
 #' * Problem 47: Distinct primes factors
 #'
 #' @param n the naturnal number to factor
+#' @param proper logical (default is FALSE): whether or not to return the proper factorst
 #'
 #' @return a numeric vector of factors
 #'
@@ -21,19 +22,25 @@
 #' get_factors(6)
 #' get_factors(7)
 #' get_factors(24)
+#' get_factors(24, proper = TRUE)
 #'
 #' @export
 
 
-get_factors <- function(n){
+get_factors <- function(n, proper = FALSE){
     check_natural_number(n)
 
     ## which n less than sqrt(n) are factors
     factLeqSqrt = which(n %% 1:floor(sqrt(n)) == 0)
     factGeqSqrt = n / factLeqSqrt
-
+    factors = as.integer(unique(c(factLeqSqrt, rev(factGeqSqrt))))
     ## concatenates; removes sqrt(n) duplicate (if applicable)
-    return(unique(c(factLeqSqrt, rev(factGeqSqrt))))
+    if(proper){
+        return(factors[-length(factors)])
+    } else{
+        return(factors)
+    }
+
 }
 
 
@@ -59,7 +66,7 @@ get_factors <- function(n){
 
 get_prime_factors <- function(n){
     check_natural_number(n)
-    if(n == 1){return(numeric(0))}
+    if(n == 1){return(integer(0))}
 
     # don't consider the factor 1
     factors = get_factors(n)[-1]
@@ -92,14 +99,14 @@ get_prime_factorization <- function(n){
     if(n == 1){
         return(
             list(
-                primes = numeric(0),
-                exponents = numeric(0)
+                primes = integer(0),
+                exponents = integer(0)
             )
         )
     }
 
     primeFactors = get_prime_factors(n)
-    primeExponents = purrr::map_dbl(
+    primeExponents = purrr::map_int(
         .x = primeFactors,
         .f = max_divisible_power,
         n = n
@@ -115,7 +122,9 @@ get_prime_factorization <- function(n){
 
 max_divisible_power <- function(n, divisor){
     maxPossiblePower = floor(log(n, divisor))
-    max(which(n %% divisor^(0:maxPossiblePower) == 0)) - 1
+    return(
+        as.integer(max(which(n %% divisor^(0:maxPossiblePower) == 0)) - 1)
+    )
 }
 
 
