@@ -6,4 +6,4 @@
 library(projecteulerr)
 
 n=10001
-get_first_n_primes(n=n)[n]
+get_first_n_primes(n)[n]

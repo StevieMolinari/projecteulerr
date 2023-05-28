@@ -41,8 +41,20 @@ test_that("`get_first_n_primes` returns correct sequence", {
     expect_identical(get_first_n_primes(5), initialPrimes[1:5])
     expect_identical(get_first_n_primes(6), initialPrimes[1:6])
     expect_identical(get_first_n_primes(25), get_primes_up_to(100))
-    # expect_identical(get_first_n_primes(10001)[10001], 104743L) #p7
+    expect_identical(get_first_n_primes(10001)[10001], 104743L) #p7
 })
+
+test_that("`get_bound_argument` returns an upper bound", {
+    n = sample(1000:2000, size = 1)
+    expect_true(length(get_primes_up_to(get_bound_argument(3))) >= 3)
+    expect_true(length(get_primes_up_to(get_bound_argument(30))) >= 30)
+    expect_true(length(get_primes_up_to(get_bound_argument(300))) >= 300)
+    expect_true(length(get_primes_up_to(get_bound_argument(n))) >= n)
+})
+
+# test_that("`get_bound_argument` accepts reasonable arguments", {
+#     expect_error(get_bound_argument(n="abc"))
+# })
 
 
 test_that("`get_primes` has arguments", {

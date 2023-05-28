@@ -30,13 +30,13 @@ get_first_n_primes <- function(n){
 get_bound_argument <- function(n) {
     adjConst = 30*log(113)/113
     boundCands = round(10^seq(2, 8, by = 0.01))
-    pi_upperBounds = ceiling(
-        adjConst * boundCands / log(boundCands)
+    pi_lowerBound = floor(
+        boundCands / log(boundCands)
     )
-    if(all(pi_upperBounds <= n)){
+    if(all(pi_lowerBound < n)){
         stop("`n` is too large.")
     }
-    boundCands[pi_upperBounds > n][1]
+    boundCands[pi_lowerBound >= n][1]
 }
 
 
@@ -47,12 +47,16 @@ get_bound_argument <- function(n) {
 #'
 #' @return a numeric vector (of length n if `n` argument is provide) containing the prime numbers
 #'
+#' @section May be useful for:
+#' * Problem 7: 10001st prime
+#' * Problem 10: Summation of primes
+#'
 #' @section Details:
 #'
 #' The `get_primes_up_to()` function is employs the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) algorithms.
 #'
 #'
-#' The `get_first_n_primes()` function is simple in that it first finds an upper bound for the nth prime. Then it employs the `get_primes_up_to()` function with this bound and then returns the first n results. The bound calculation employs the [Prime Number Theorem](https://en.wikipedia.org/wiki/Prime_number_theorem) which says the prime-counting function \eqn{\pi(N)} (the number of primes less than or equal to \eqn{N}) limits to \eqn{\frac{N}{\log{N}}}. This means there exists a constant \eqn{c} such that \eqn{\pi(N) \leq c \, \frac{N}{\log{N}}}. By inspection we find that:
+#' The `get_first_n_primes()` function first finds an upper bound for the nth prime. Then it employs the `get_primes_up_to()` function with this bound and then returns the first n results. The bound calculation employs the [Prime Number Theorem](https://en.wikipedia.org/wiki/Prime_number_theorem) which says the prime-counting function \eqn{\pi(N)} (the number of primes less than or equal to \eqn{N}) limits to \eqn{\frac{N}{\log{N}}}. This means there exists a constant \eqn{c} such that \eqn{\pi(N) \leq c \, \frac{N}{\log{N}}}. By inspection we find that:
 #'
 #'  \eqn{\underset{N \leq 10^8}{\mathrm{argmax}} \, \, \frac{\pi(N) \log{N}}{N} = 113}.
 #'
@@ -66,6 +70,7 @@ get_bound_argument <- function(n) {
 #' get_first_n_primes(20)
 #'
 #' @export
+
 get_primes <- function(n, bound){
     if(missing(n) & missing(bound)){
         stop("Either `n` or `bound` argument must be provided.")
