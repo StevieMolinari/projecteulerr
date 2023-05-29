@@ -31,3 +31,10 @@ is_prime <- function(n){
     )
 }
 
+
+is_palindrome <- function(n){
+    check_non_negative_integer(n)
+    digits = get_digits(n)
+    all(digits == rev(digits))
+}
+
