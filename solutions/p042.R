@@ -15,7 +15,6 @@ get_word_score <- function(word){
     sum(letterDict[str_split(word, "")[[1]]])
 }
 
-words_p42 = read_data(42)
-wordScores = sapply(words_p42, get_word_score)
-
+data("p042_words")
+wordScores = sapply(p042_words, get_word_score)
 sum(sapply(wordScores, is_polygonal_number, s = 3))
