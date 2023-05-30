@@ -5,6 +5,17 @@ check_is_numeric <- function(n, param = "n") {
     }
 }
 
+check_can_be_numeric <- function(n, param = "n") {
+    tryCatch(
+        {as.numeric(n)},
+        warning=function(w){
+            stop(paste0(
+                "`", param, "` cannot be coerced as a numeric."
+            ))
+        }
+    )
+}
+
 check_is_scalar <- function(n, param = "n") {
     if(length(n) != 1){
         stop(paste0("`", param, "` must be length 1."))
