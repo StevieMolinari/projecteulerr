@@ -19,10 +19,10 @@
 # NOTE: Wording was modified slightly on 24 April 2007 to emphasise the theoretical nature of Lychrel numbers.
 
 library(projecteulerr)
-
+n = 8039
 is_lychrel <- function(n){
     reverseSum = n
-    for(iIter in 1:12){
+    for(iIter in 1:11){
         reverseSum = reverseSum + reverse_digits(reverseSum)
         if(reverseSum %>% is_palindrome){return(FALSE)}
     }
@@ -33,3 +33,9 @@ n=4994
 is_lychrel(47)
 is_lychrel(349)
 is_lychrel(4994)
+
+count = 0
+for(i in 1:10^4){
+    if(is_lychrel(i)) {count = count + 1}
+}
+
