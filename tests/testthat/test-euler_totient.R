@@ -1,0 +1,20 @@
+test_that("`euler_totient` takes only natural number arguments", {
+    expect_error(euler_totient(1:2), "must be length 1")
+    expect_error(euler_totient("abc"), "must be a numeric")
+    expect_error(euler_totient(n=-2), "must be a positive")
+    expect_error(euler_totient(n=4/3), "must be an integer")
+})
+
+test_that("`euler_totient` returns correct values", {
+    expect_identical(euler_totient(1), 0L)
+    expect_identical(euler_totient(2), 1L)
+    expect_identical(euler_totient(3), 2L)
+    expect_identical(euler_totient(4), 2L)
+    expect_identical(euler_totient(5), 4L)
+    expect_identical(euler_totient(6), 2L)
+    expect_identical(euler_totient(7), 6L)
+    expect_identical(euler_totient(8), 4L)
+    expect_identical(euler_totient(9), 6L)
+    expect_identical(euler_totient(10), 4L)
+    expect_identical(euler_totient(101), 100L)
+})
