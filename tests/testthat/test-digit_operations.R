@@ -1,15 +1,15 @@
-test_that("`check_get_digit_argument` throws appropriate errors", {
-    expect_error(check_get_digit_argument(1:2), "must be length 1")
+test_that("`check_get_digits_argument` throws appropriate errors", {
+    expect_error(check_get_digits_argument(1:2), "must be length 1")
     expect_error(
-        check_get_digit_argument("abc"), "cannot be coerced as a numeric"
+        check_get_digits_argument("abc"), "cannot be coerced as a numeric"
     )
-    expect_error(check_get_digit_argument(n=-2), "must be non-negative")
-    expect_error(check_get_digit_argument(n=4/3), "must be an integer")
+    expect_error(check_get_digits_argument(n=-2), "must be non-negative")
+    expect_error(check_get_digits_argument(n=4/3), "must be an integer")
 })
 
-test_that("`check_get_digit_argument` accept numerics and coercibles", {
-    expect_null(check_get_digit_argument(123))
-    expect_null(check_get_digit_argument("123"), 123)
+test_that("`check_get_digits_argument` accept numerics and coercibles", {
+    expect_null(check_get_digits_argument(123))
+    expect_null(check_get_digits_argument("123"), 123)
 })
 
 test_that("`get_digits` returns single digit numbers", {

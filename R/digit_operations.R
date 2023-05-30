@@ -1,9 +1,9 @@
 get_digits <- function(n){
-    check_get_digit_argument(n)
+    check_get_digits_argument(n)
     as.integer(stringr::str_split(format(n, scientific = FALSE), "")[[1]])
 }
 
-check_get_digit_argument <- function(n){
+check_get_digits_argument <- function(n){
     check_is_scalar(n)
     n = check_can_be_numeric(n)
     check_is_integer(n)
