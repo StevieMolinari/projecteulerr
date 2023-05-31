@@ -6,10 +6,15 @@
 
 library(projecteulerr)
 
-numbers_3dig = 100:999
-prods_3digs = expand.grid(numbers_3dig, numbers_3dig) %>%
-    apply(MARGIN = 1, prod) %>%
-    unique()
-max(prods_3digs[sapply(prods_3digs, is_palindrome)])
+solve_p004 <- function(){
+    numbers_3dig = 100:999
+    prods_3digs = expand.grid(numbers_3dig, numbers_3dig) %>%
+        apply(MARGIN = 1, prod) %>%
+        unique()
+    max(prods_3digs[sapply(prods_3digs, is_palindrome)])
+}
+
+solve_p004() == 906609
+
 
 

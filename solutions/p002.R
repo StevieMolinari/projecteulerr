@@ -7,6 +7,10 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 library(projecteulerr)
 
-fibonaccis = get_fibonaccis_up_to(4*10^6)
-evenFibonaccis = fibonaccis[fibonaccis %% 2 == 0]
-sum(evenFibonaccis)
+solve_p002 <- function(){
+    fibonaccis = get_fibonaccis_up_to(4*10^6)
+    evenFibonaccis = fibonaccis[fibonaccis %% 2 == 0]
+    sum(evenFibonaccis)
+}
+
+solve_p002() == 4613732
