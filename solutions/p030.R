@@ -3,9 +3,7 @@
 # Surprisingly there are only three numbers that can be written as the sum of fourth powers of their digits:
 #
 # 1634 = 1^4 + 6^4 + 3^4 + 4^4
-#
 # 8208 = 8^4 + 2^4 + 0^4 + 8^4
-#
 # 9474 = 9^4 + 4^4 + 7^4 + 4^4
 #
 # As 1 = 1^4 is not a sum it is not included.
@@ -16,12 +14,14 @@
 
 library(projecteulerr)
 
-sum_of_powers <- function(x, p){sum(x^p)}
 is_sum_of_digit_powers <- function(n, p){
     sum_of_powers(get_digits(n), p) == n
 }
 
-# sum_of_powers(rep(9, 6), 5) < 999999
-MAX_N = 6*9^5
-numbers = 2:MAX_N
-sum(numbers[sapply(numbers, is_sum_of_digit_powers, p = 5)])
+solve_p030 <- function(){
+    MAX_N = 6*9^5
+    numbers = 2:MAX_N
+    sum(numbers[sapply(numbers, is_sum_of_digit_powers, p = 5)])
+}
+
+solve_p030() == 443839
