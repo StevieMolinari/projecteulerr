@@ -19,16 +19,29 @@ split_words_from_camel_case <- function(camelCaseWords){
     return(paste(splitWords_lower, collapse = " "))
 }
 
-# split_words_from_camel_case("theseAreSomeWords")
-# split_words_from_camel_case("TheseAreSomeWords")
-# split_words_from_camel_case("these")
-# split_words_from_camel_case("thesearesomewords")
-# split_words_from_camel_case("theseAreSomeWords OhNo")
-
-
 rename_columns <- function(df, colNames){
     colnames(df) = colNames
     return(df)
+}
+
+subset_lines_by_patterns <- function(lines, startPattern, stopPattern) {
+    startInd = str_which(lines, startPattern)
+    stopInd = str_which(lines, stopPattern)
+    if(length(c(startPattern, stopPattern)) != 2){
+        stop("Start and stop patterns don't return two hits")
+    }
+    lines[startInd:stopInd]
+}
+
+replace_values <- function(x, value, replacement){
+    x[x == value] = replacement
+    x
+}
+
+matrix_as_numeric <- function(matrix){
+    matrix %>%
+        as.numeric() %>%
+        matrix(nrow = nrow(matrix), ncol = ncol(matrix))
 }
 
 

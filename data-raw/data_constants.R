@@ -1,15 +1,21 @@
-resourcePath = "https://projecteuler.net/project/resources/"
+resourcesPath = "https://projecteuler.net/project/resources/"
 problemPrefix = "https://projecteuler.net/problem="
 
 dataUrls = c(
     "008" = paste0(problemPrefix, "8"),
-    "022" = paste0(resourcePath, "p022_names.txt"),
-    "042" = paste0(resourcePath, "p042_words.txt"),
-    "054" = paste0(resourcePath, "p054_poker.txt")
+    "011" = paste0(problemPrefix, "11"),
+    "013" = paste0(problemPrefix, "13"),
+    "018" = paste0(problemPrefix, "18"),
+    "022" = paste0(resourcesPath, "p022_names.txt"),
+    "042" = paste0(resourcesPath, "p042_words.txt"),
+    "054" = paste0(resourcesPath, "p054_poker.txt")
 )
 
 dataObjects = c(
     "008" = "number",
+    "011" = "grid",
+    "013" = "numbers",
+    "018" = "triangle",
     "022" = "names",
     "042" = "words",
     "054" = "pokerHands"
@@ -17,6 +23,9 @@ dataObjects = c(
 
 dataTypes = c(
     "008" = "character",
+    "011" = "numeric matrix",
+    "013" = "character vector",
+    "018" = "numeric matrix",
     "022" = "character vector",
     "042" = "character vector",
     "054" = "charcter matrix"

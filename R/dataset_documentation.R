@@ -8,6 +8,36 @@
 #' @source <https://projecteuler.net/problem=8>
 "p008_number"
 
+#' Problem 11 grid
+#'
+#' The grid provided in Project Euler problem 11.
+#' @name p011_grid
+#' @docType data
+#' @format ## `p011_grid`
+#' The grid (as a numeric matrix) provided in Project Euler problem 11.
+#' @source <https://projecteuler.net/problem=11>
+"p011_grid"
+
+#' Problem 13 numbers
+#'
+#' The numbers provided in Project Euler problem 13.
+#' @name p013_numbers
+#' @docType data
+#' @format ## `p013_numbers`
+#' The numbers (as a character vector) provided in Project Euler problem 13.
+#' @source <https://projecteuler.net/problem=13>
+"p013_numbers"
+
+#' Problem 18 triangle
+#'
+#' The triangle provided in Project Euler problem 18.
+#' @name p018_triangle
+#' @docType data
+#' @format ## `p018_triangle`
+#' The triangle (as a numeric matrix) provided in Project Euler problem 18.
+#' @source <https://projecteuler.net/problem=18>
+"p018_triangle"
+
 #' Problem 22 names
 #'
 #' The names provided in Project Euler problem 22.

@@ -7,7 +7,10 @@
 \format{
 \subsection{\code{p054_pokerHands}}{
 
-charcter matrix containing poker hands
+A character matrix with 1,000 rows and 10 columns. The first five columns contain the cards for the first player and the last five columns contain the cards for the second player:
+\describe{
+\item{Pi_Cj}{the jth card for the ith player (e.g the \code{P1_C3} column contains the first player's 3rd cards)}
+}
 }
 }
 \source{
