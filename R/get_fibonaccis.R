@@ -51,7 +51,7 @@ get_fibonaccis_up_to <- function(bound){
 #'
 #' @seealso [get_nth_fibonacci()]
 #'
-#' @section May be useful for:
+#' @section May be useful for ...:
 #' * Problem 2: Even Fibonacci numbers
 #'
 #' @examples

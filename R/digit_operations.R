@@ -1,6 +1,8 @@
 get_digits <- function(n){
     check_get_digits_argument(n)
-    as.integer(stringr::str_split(format(n, scientific = FALSE), "")[[1]])
+    stringr::str_split(format(n, scientific = FALSE), pattern = "")[[1]] %>%
+        as.integer()
+
 }
 
 check_get_digits_argument <- function(n){

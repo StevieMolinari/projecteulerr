@@ -27,7 +27,7 @@ a sequence of integers
 \description{
 Provides a sequence of Fibonacci numbers
 }
-\section{May be useful for}{
+\section{May be useful for ...}{
 
 \itemize{
 \item Problem 2: Even Fibonacci numbers
