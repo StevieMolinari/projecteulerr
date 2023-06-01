@@ -1,10 +1,14 @@
 Package: projecteulerr
 Type: Package
-Title: Helpful Functions for Solving Project Euler Problems
+Title: A Toolkit for Solving Project Euler Problems
 Version: 0.1.0
-Author: Stevie Molinari
+Authors@R: person(given = "Stevie", family = "Molinari", 
+    email = "stephen.molinari@gmail.com", role = c("aut", "cre"))
 Maintainer: Stevie Molinari <stephen.molinari@gmail.com>
-Description: Convenience functions for solving Project Euler problems.
+Description: A collection of handy function, data sets, and expository vignettes 
+    tailor-made for Project Euler. While no problems are explicitly solved, a 
+    savvy user can assemble these component parts to garner solutions to 
+    nearly all of the first 100 problems.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
