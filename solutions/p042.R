@@ -10,11 +10,10 @@
 
 library(projecteulerr)
 
-letterDict = setNames(1:26, LETTERS)
-get_word_score <- function(word){
-    sum(letterDict[str_split(word, "")[[1]]])
+solve_p042 <- function(){
+    data("p042_words")
+    wordScores = sapply(p042_words, sum_letter_values)
+    sum(sapply(wordScores, is_polygonal_number, s = 3))
 }
 
-data("p042_words")
-wordScores = sapply(p042_words, get_word_score)
-sum(sapply(wordScores, is_polygonal_number, s = 3))
+solve_p042() == 162

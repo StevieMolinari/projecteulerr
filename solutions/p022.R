@@ -8,12 +8,11 @@
 
 library(projecteulerr)
 
-letterDict = setNames(1:26, LETTERS)
-get_name_score <- function(name){
-    sum(letterDict[str_split(name, "")[[1]]])
+solve_p022 <- function(){
+    data("p022_names")
+    p022_names_sorted = p022_names %>% sort()
+    nNames = length(p022_names)
+    sum(sapply(p022_names_sorted, sum_letter_values) * 1:nNames)
 }
-data("p022_names")
-p022_names_sorted = p022_names %>% sort()
-nNames = length(p022_names)
-sum(sapply(p022_names_sorted, get_name_score) * 1:nNames)
 
+solve_p022() == 871198282
