@@ -1,7 +1,7 @@
 Package: projecteulerr
 Type: Package
 Title: A Toolkit for Solving Project Euler Problems
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person(given = "Stevie", family = "Molinari", 
     email = "stephen.molinari@gmail.com", role = c("aut", "cre"))
 Maintainer: Stevie Molinari <stephen.molinari@gmail.com>
@@ -24,3 +24,5 @@ Imports:
     stringr
 Depends: 
     R (>= 2.10)
+URL: https://projecteuler.net/, https://github.com/StevieMolinari/projecteulerr 
+BugReports: https://github.com/StevieMolinari/projecteulerr/issues

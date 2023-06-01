@@ -4,8 +4,21 @@
 \name{projecteulerr-package}
 \alias{projecteulerr}
 \alias{projecteulerr-package}
-\title{projecteulerr: Helpful Functions for Solving Project Euler Problems}
+\title{projecteulerr: A Toolkit for Solving Project Euler Problems}
 \description{
-Convenience functions for solving Project Euler problems.
+A collection of handy function, data sets, and expository vignettes tailor-made for Project Euler. While no problems are explicitly solved, a savvy user can assemble these component parts to garner solutions to nearly all of the first 100 problems.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/StevieMolinari/projecteulerr}
+  \item \url{https://projecteuler.net/}
+  \item Report bugs at \url{https://github.com/StevieMolinari/projecteulerr/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Stevie Molinari \email{stephen.molinari@gmail.com}
+
 }
 \keyword{internal}
