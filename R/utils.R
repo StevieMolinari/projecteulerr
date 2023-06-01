@@ -16,6 +16,13 @@ check_can_be_numeric <- function(n, param = "n") {
     )
 }
 
+check_is_character <- function(x, param = "x") {
+    if(!is.character(x)){
+        stop(paste0("`", param, "` must be a character."))
+    }
+}
+
+
 check_is_scalar <- function(n, param = "n") {
     if(length(n) != 1){
         stop(paste0("`", param, "` must be length 1."))

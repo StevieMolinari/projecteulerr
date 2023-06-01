@@ -8,7 +8,15 @@ dataUrls = c(
     "018" = paste0(problemPrefix, "18"),
     "022" = paste0(resourcesPath, "p022_names.txt"),
     "042" = paste0(resourcesPath, "p042_words.txt"),
-    "054" = paste0(resourcesPath, "p054_poker.txt")
+    "054" = paste0(resourcesPath, "p054_poker.txt"),
+    # * p067: https://projecteuler.net/resources/documents/0067_triangle.txt
+    # * p079: https://projecteuler.net/resources/documents/0079_keylog.txt
+    # * p081: https://projecteuler.net/resources/documents/0081_matrix.txt
+    # * p082: https://projecteuler.net/resources/documents/0082_matrix.txt
+    # * p083: https://projecteuler.net/resources/documents/0083_matrix.txt
+    # * p089: https://projecteuler.net/resources/documents/0089_roman.txt
+    # * p096: https://projecteuler.net/project/resources/p096_sudoku.txt
+    # * p098: https://projecteuler.net/resources/documents/0098_words.txt
 )
 
 dataObjects = c(
