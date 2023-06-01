@@ -1,5 +1,6 @@
-resourcesPath = "https://projecteuler.net/project/resources/"
 problemPrefix = "https://projecteuler.net/problem="
+resourcesPath = "https://projecteuler.net/project/resources/"
+documentsPath = "https://projecteuler.net/resources/documents/"
 
 dataUrls = c(
     "008" = paste0(problemPrefix, "8"),
@@ -9,14 +10,14 @@ dataUrls = c(
     "022" = paste0(resourcesPath, "p022_names.txt"),
     "042" = paste0(resourcesPath, "p042_words.txt"),
     "054" = paste0(resourcesPath, "p054_poker.txt"),
-    # * p067: https://projecteuler.net/resources/documents/0067_triangle.txt
-    # * p079: https://projecteuler.net/resources/documents/0079_keylog.txt
-    # * p081: https://projecteuler.net/resources/documents/0081_matrix.txt
-    # * p082: https://projecteuler.net/resources/documents/0082_matrix.txt
-    # * p083: https://projecteuler.net/resources/documents/0083_matrix.txt
-    # * p089: https://projecteuler.net/resources/documents/0089_roman.txt
-    # * p096: https://projecteuler.net/project/resources/p096_sudoku.txt
-    # * p098: https://projecteuler.net/resources/documents/0098_words.txt
+    "067" = paste0(documentsPath, "0067_triangle.txt"),
+    "079" = paste0(documentsPath, "0079_keylog.txt"),
+    "081" = paste0(documentsPath, "0081_matrix.txt"),
+    "082" = paste0(documentsPath, "0082_matrix.txt"),
+    "083" = paste0(documentsPath, "0083_matrix.txt"),
+    "089" = paste0(documentsPath, "0089_roman.txt"),
+    "096" = paste0(resourcesPath, "p096_sudoku.txt"),
+    "098" = paste0(documentsPath, "0098_words.txt")
 )
 
 dataObjects = c(
@@ -26,7 +27,15 @@ dataObjects = c(
     "018" = "triangle",
     "022" = "names",
     "042" = "words",
-    "054" = "pokerHands"
+    "054" = "pokerHands",
+    "067" = "triangle",
+    "079" = "keylog",
+    "081" = "matrix",
+    "082" = "matrix",
+    "083" = "matrix",
+    "089" = "romanNumerals",
+    "096" = "sudokuGrids",
+    "098" = "words"
 )
 
 dataTypes = c(
@@ -36,7 +45,15 @@ dataTypes = c(
     "018" = "numeric matrix",
     "022" = "character vector",
     "042" = "character vector",
-    "054" = "charcter matrix"
+    "054" = "charcter matrix",
+    "067" = "numeric matrix",
+    "079" = "numeric vector",
+    "081" = "numeric matrix",
+    "082" = "numeric matrix",
+    "083" = "numeric matrix",
+    "089" = "character vector",
+    "096" = "list of numeric matrices",
+    "098" = "character vector"
 )
 
 dataDescriptions = list(

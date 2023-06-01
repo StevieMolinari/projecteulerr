@@ -71,3 +71,83 @@
 #' @source <https://projecteuler.net/project/resources/p054_poker.txt>
 "p054_pokerHands"
 
+#' Problem 67 triangle
+#'
+#' The triangle provided in Project Euler problem 67.
+#' @name p067_triangle
+#' @docType data
+#' @format ## `p067_triangle`
+#' The triangle (as a numeric matrix) provided in Project Euler problem 67.
+#' @source <https://projecteuler.net/resources/documents/0067_triangle.txt>
+"p067_triangle"
+
+#' Problem 79 keylog
+#'
+#' The keylog provided in Project Euler problem 79.
+#' @name p079_keylog
+#' @docType data
+#' @format ## `p079_keylog`
+#' The keylog (as a numeric vector) provided in Project Euler problem 79.
+#' @source <https://projecteuler.net/resources/documents/0079_keylog.txt>
+"p079_keylog"
+
+#' Problem 81 matrix
+#'
+#' The matrix provided in Project Euler problem 81.
+#' @name p081_matrix
+#' @docType data
+#' @format ## `p081_matrix`
+#' The matrix (as a numeric matrix) provided in Project Euler problem 81.
+#' @source <https://projecteuler.net/resources/documents/0081_matrix.txt>
+"p081_matrix"
+
+#' Problem 82 matrix
+#'
+#' The matrix provided in Project Euler problem 82.
+#' @name p082_matrix
+#' @docType data
+#' @format ## `p082_matrix`
+#' The matrix (as a numeric matrix) provided in Project Euler problem 82.
+#' @source <https://projecteuler.net/resources/documents/0082_matrix.txt>
+"p082_matrix"
+
+#' Problem 83 matrix
+#'
+#' The matrix provided in Project Euler problem 83.
+#' @name p083_matrix
+#' @docType data
+#' @format ## `p083_matrix`
+#' The matrix (as a numeric matrix) provided in Project Euler problem 83.
+#' @source <https://projecteuler.net/resources/documents/0083_matrix.txt>
+"p083_matrix"
+
+#' Problem 89 romanNumerals
+#'
+#' The romanNumerals provided in Project Euler problem 89.
+#' @name p089_romanNumerals
+#' @docType data
+#' @format ## `p089_romanNumerals`
+#' The roman numerals (as a character vector) provided in Project Euler problem 89.
+#' @source <https://projecteuler.net/resources/documents/0089_roman.txt>
+"p089_romanNumerals"
+
+#' Problem 96 sudokuGrids
+#'
+#' The sudokuGrids provided in Project Euler problem 96.
+#' @name p096_sudokuGrids
+#' @docType data
+#' @format ## `p096_sudokuGrids`
+#' The sudoku grids (as a list of numeric matrices) provided in Project Euler problem 96.
+#' @source <https://projecteuler.net/project/resources/p096_sudoku.txt>
+"p096_sudokuGrids"
+
+#' Problem 98 words
+#'
+#' The words provided in Project Euler problem 98.
+#' @name p098_words
+#' @docType data
+#' @format ## `p098_words`
+#' The words (as a character vector) provided in Project Euler problem 98.
+#' @source <https://projecteuler.net/resources/documents/0098_words.txt>
+"p098_words"
+

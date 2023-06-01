@@ -71,3 +71,55 @@ read_p054_data <- function(){
         )
 }
 
+read_p067_data <- function(){
+    dataUrls["067"] %>%
+        read_lines_quietly() %>%
+        str_split_fixed(" ", n = 100) %>%
+        replace_values("", NA) %>%
+        matrix_as_numeric()
+}
+
+read_p079_data <- function(){
+    dataUrls["079"] %>%
+        read_lines_quietly() %>%
+        as.numeric()
+}
+
+read_p081_data <- function(){
+    dataUrls["081"] %>%
+        read_lines_quietly() %>%
+        str_split_fixed(",", n = 80) %>%
+        matrix_as_numeric()
+}
+
+read_p082_data <- function(){
+    dataUrls["082"] %>%
+        read_lines_quietly() %>%
+        str_split_fixed(",", n = 80) %>%
+        matrix_as_numeric()
+}
+
+read_p083_data <- function(){
+    dataUrls["083"] %>%
+        read_lines_quietly() %>%
+        str_split_fixed(",", n = 80) %>%
+        matrix_as_numeric()
+}
+
+read_p089_data <- function(){
+    dataUrls["089"] %>%
+        read_lines_quietly()
+}
+
+read_p096_data <- function(){
+    dataUrls["096"] %>%
+        read_lines_quietly() %>%
+        parse_raw_sudoku_grids()
+}
+
+read_p098_data <- function(){
+    dataUrls["098"] %>%
+        read_lines_quietly() %>%
+        split_format_words()
+}
+

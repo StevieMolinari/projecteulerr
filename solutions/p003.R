@@ -6,7 +6,7 @@
 library(projecteulerr)
 
 # solve_p003 <- function(){
-#     max(get_prime_factors(n=600851475143))
+max(get_prime_factors(n=600851475143))
 # }
 
-solve_p003() == 6857
+# solve_p003() == 6857
