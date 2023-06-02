@@ -1,3 +1,13 @@
+#' Provides sum of numeric substitution for letters
+#'
+#' @param word the "word" whose letters to consider
+#' @param letterVals the dictionary (a named numeric vector)
+#'
+#' @return the numeric sum
+#' @export
+#'
+#' @examples
+#' sum_letter_values("COLIN")
 sum_letter_values <- function(
     word,
     letterVals = stats::setNames(1:26, LETTERS)

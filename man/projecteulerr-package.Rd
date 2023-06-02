@@ -11,8 +11,8 @@ A collection of handy function, data sets, and expository vignettes tailor-made 
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/StevieMolinari/projecteulerr}
   \item \url{https://projecteuler.net/}
+  \item \url{https://github.com/StevieMolinari/projecteulerr}
   \item Report bugs at \url{https://github.com/StevieMolinari/projecteulerr/issues}
 }
 
